@@ -1,0 +1,217 @@
+<!-- D O C U M E N T   T Y P E - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+<!-- Définition du type de document (pour HTML5 écrire DOCTYPE en majuscules pour compatibilité XTML5)	                     -->
+
+<!DOCTYPE html>
+
+
+<!-- H T M L - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+<!-- Le HTML commence ici;
+	
+	avec éventuellement l'attribut lang
+	pour préciser la langue utilisée pour le contenu de la page,
+	et pour être utile aux synthèses vocales, pour adopter le bon accent;
+	ex: <html lang="fr">
+
+	avec éventuellement l'attribut dir
+	pour préciser la direction du texte (rendu bidirectionnel du texte);
+	ex : <html lang="fr-fr" dir="ltr">
+	ltr pour left to right.		 																		                                                             -->
+
+
+<html lang="fr-fr" dir="ltr">
+
+
+<!-- H E A D - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+	<head>
+
+		<!-- HEAD from https://gethead.info/#elements                                                                            -->
+        
+    <!--
+    Set the character encoding for this document, so that
+    all characters within the UTF-8 space (such as emoji)
+    are rendered correctly.                                                                                                  -->
+
+		<!-- Encodage presque universel 	                                                                                       -->
+		<meta charset="utf-8" />
+		<!--Interdire le mode de compatibilité sur IE et forcer l'utilisation de Chrome Frame chrome=1                           -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge"> <!-- † -->
+		<!-- RWD, media-queries                                                                                                  -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- 
+    The above 3 meta tags *must* come first in the <head>
+    to consistently ensure proper document rendering.
+    Any other head element should come *after* these tags.
+    † Use the content="ie-edge" tag if your project
+    supports Internet Explorer prior to version 11.                                                                          -->
+
+    <!-- Set the document's title                                                                                            -->
+    <!-- Titre de la page dans l'onglet	du navigateur                                                                        -->
+    <title>Page Title</title>
+
+    <!-- Set the base URL for all relative URLs within the document
+    <base href="http://example.com/page.html">                                                                               -->
+		<!-- URL de base, permet de raccourcir les autres URL de la page	                                                 
+		<base href="http://localhost:8888/1-DEVELOPMENT/" />                                                                     -->						
+		
+    <!-- Mots clés                                                                                                           -->
+		<meta name="keywords" content="keyword1, keyword2, keyword3"/>
+		
+    <!-- Auteur                                                                                                              -->
+		<meta name="author" content="The Author" />
+		
+		<!-- Description de la page                                                                                              -->
+		<meta name="description" content="Décrire la page ici."/>
+		
+		<!-- Logiciel(s) utilisé(s) pour la création du site                                                                     -->
+		<meta name="generator" content="HTML, CSS, PHP, SQL, MYSQL."/>
+		
+
+		<!-- C S S - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+		<!-- Link to an external CSS file                                                                                    -->
+		<!-- Appel fichiers CSS                                                                                              -->                                         
+
+			<!-- 1. CSS BASE -->
+			<!-- Feuille de styles de base pour tous les médias de restitution 
+			<link rel="stylesheet" type="text/css" media="all" href="css/1-base.css" />                                        -->
+
+			<!-- 2. CSS ADDITIONAL BASE -->
+			<!-- Feuille de styles de base supplémentaires pour tous les médias de restitution
+			<link rel="stylesheet" type="text/css" media="all" href="css/2-additional_base.css" />  				 		               -->	
+
+			<!-- 3. CSS SCREEN -->
+			<!-- Feuille de styles pour l'affichage à l'écran                                                                  -->
+			<link rel="stylesheet" type="text/css" media="screen" href="css/3-screen.css" />
+
+      <!-- 4. CSS PRINT -->
+			<!-- Feuille de styles pour l'impression 
+			<link rel="stylesheet" type="text/css" media="print" href="css/4-print.css" > 							 		                   -->
+											                 
+			<!-- 5. CSS SCREENREADER -->
+			<!-- Feuille de styles pour les lecteurs d'écrans
+			<link rel="stylesheet" type="text/css" media="speech" href="css/5-screenreader.css" > 					 		               -->
+
+      <!-- 6. CSS CUSTOM -->
+			<!-- Feuille de styles personnalisée
+			<link rel="stylesheet" type="text/css" media="speech" href="css/6-custom.css" > 					 		               -->
+
+		<!-- Used for adding in-document CSS
+        <style>
+          /* ... */
+        </style>                                                                                                         -->
+
+  		
+  	<!-- I C O N S - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <!-- Appel fichier favicon                                                                                           -->
+		
+		<!-- Official method                                                                                                 -->
+    <!--<link rel="icon" href="/favicon.ico" type="image/x-icon">                                                        -->
+		
+		<!-- For some older browsers (IE8 and below)                                                                         -->
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+		<!-- For IE 10 and below -->
+    <!-- No link, just place a file called favicon.ico in the root directory                                             -->
+        
+    <!-- For IE 11, Chrome, Firefox, Safari, Opera                                                                       -->
+    <!--
+    <link rel="icon" href="path/to/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="path/to/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="path/to/favicon-48.png" sizes="48x48" type="image/png">
+    <link rel="icon" href="path/to/favicon-62.png" sizes="62x62" type="image/png">
+		                                                                                                                     -->
+    <!-- Touch Icons for Mobile Devices                                                                                  -->
+    <!-- 
+    *** Apple / Safari ***
+    link rel=”apple-touch- icon” or link rel=”apple-touch-icon-precomposed”	| 76x76 - iPad 2 and iPad mini 
+		                                                                        | 120x120 - iPhone 4s, 5, 6 
+	                                                                          | 152x152 - iPad (retina) 
+	                                                                          | 180x180 - iPhone 6 Plus
+	  *** Apple / Opera Coast ***
+	  link rel=”icon” (Will also accept Safari and Windows formats)           | 228x228
+		
+		*** Android / Chrome ***
+		link rel=”icon” (Will, for a limited time, also accept Safari format)   | 192x192                                     -->
+
+		<!-- For Windows, these icons are defined using the meta tag instead.                                                 -->
+
+    <!-- For Windows 8 / IE 10                                                                                            -->
+    <!--    
+    <meta name="msapplication-TileImage" content="pinned-tile.png">
+    <meta name="msapplication-TileColor" content="#009900">
+                                                                                                                          -->   
+    <!-- For Windows 8.1 / IE 11                                                                                          -->
+    <!-- In <head> -->
+    <!--
+    <meta name="msapplication-config" content="ieconfig.xml" />                                                           -->
+    <!--  In ieconfig.xml -->
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <browserconfig>
+      <msapplication>
+        <tile>
+          <square70x70logo src="images/smalltile.png"/>
+          <square150x150logo src="images/mediumtile.png"/>
+          <wide310x150logo src="images/widetile.png"/>
+          <square310x310logo src="images/largetile.png"/>
+          <TileColor>#009900</TileColor>
+         </tile>
+      </msapplication>
+    </browserconfig>
+		                                                                                                                      -->
+
+
+ 		<!-- J A V A S C R I P T - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+
+    <!--
+    Les scripts javascript doivent être placés dans un fichier externe à la page HTML. Habituellement, on place la balise
+    d'insertion des fichiers dans le <head> . Pour une question de performances on préférera la placer à la fin de la page,
+    juste avant </body> À noter que les deux méthodes sont valides du point de vue de la spécification HTML et XHTML.
+                                                                                                                          -->
+    <!-- JavaScript & No-JavaScript tags                                                                                  --> 
+        
+    <!--
+    <script src="js/script.js"></script>
+    <script src="js/custom.js"></script>                                                                                  -->  
+        
+    <!--
+    <script>
+      // function(s) go here
+    </script>
+                                                                                                                          -->
+    <!--                                                           
+    <noscript>                                                                                                            -->
+      <!-- No JS alternative -->
+    <!--
+    </noscript>                                                                                                           -->
+    
+    </head>
+  
+
+<!-- B O D Y - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <body>
+     
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+
+</html>
